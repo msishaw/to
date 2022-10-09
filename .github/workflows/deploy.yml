@@ -1,11 +1,13 @@
 name: deploy
 
 on:
-  workflow_run:
-    workflows: ["check"]
-    branches: [main]
-    types:
-      - completed
+  # workflow_run:
+    # workflows: ["check"]
+    # branches: [main]
+    # types:
+      # - completed
+  schedule:
+    - cron: "0 19 * * 4"
 
   workflow_dispatch:
 
