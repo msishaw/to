@@ -7,7 +7,7 @@ on:
     types:
       - completed
   schedule:
-    - cron: "0 */5 * * *"
+    - cron: "0 */6 * * *"
 
   workflow_dispatch:
 
@@ -30,10 +30,10 @@ jobs:
           rm -rf *.txt
           TZ='Asia/Shanghai'; export TZ
           
-          if [ "$(curl -sL -w '%{http_code}' https://mstor.herokuapp.com/ -o /dev/null)" = "200" ]; then
-            echo ------------success excute curl mstor!!!!!!!------------
+          if [ "$(curl -sL -w '%{http_code}' https://mstro.herokuapp.com/ -o /dev/null)" = "200" ]; then
+            echo ------------success excute curl mstro!!!!!!!------------
           else
-            echo "msht Fail!!!"
+            echo "mstro Fail!!!"
           fi
           
           
